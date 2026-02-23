@@ -40,3 +40,4 @@ appendChild(): I use this to add the element as the last child of the parent.
 = Event Delegation is a technique that uses Event Bubbling to handle events more efficiently.
 
 ### 5. preventDefault() vs stopPropagation()?
+=I use preventDefault() when I want to stop a form from refreshing the page, but I use stopPropagation() when I want to click a button inside a card without triggering the card's own click event.
