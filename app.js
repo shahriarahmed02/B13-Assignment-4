@@ -19,13 +19,13 @@ function render() {
     // Filter jobs
     const filteredJobs = jobs.filter(job => activeTab === 'all' ? true : job.status === activeTab);
     
-    // Update Dashboard Counts (Dynamic updates)
+    // Update Dashboard Counts 
     document.getElementById('total-count').innerText = jobs.length;
     document.getElementById('interview-count').innerText = jobs.filter(j => j.status === 'interview').length;
     document.getElementById('rejected-count').innerText = jobs.filter(j => j.status === 'rejected').length;
     document.getElementById('stat-count').innerText = filteredJobs.length;
 
-    // Empty State Check (Theme Aware)
+    // Empty State Check 
     if (filteredJobs.length === 0) {
         container.innerHTML = `
             <div class="flex flex-col items-center justify-center py-20 bg-base-100 rounded-xl border-2 border-dashed border-base-300">
@@ -43,7 +43,7 @@ function render() {
         
         // --- DYNAMIC STATUS LOGIC ---
         let statusText = "Not Applied";
-        let statusColor = "opacity-50"; // Dim gray for "Not Applied"
+        let statusColor = "opacity-50"; 
 
         if (job.status === 'interview') {
             statusText = "Interview";
@@ -91,7 +91,7 @@ function render() {
 
 function changeTab(tab) {
     activeTab = tab;
-    // Update Button Classes (Using base-100/base-300 for dark mode buttons)
+    // Update Button Classes for Active State
     ['all', 'interview', 'rejected'].forEach(t => {
         const btn = document.getElementById(`tab-${t}`);
         if (btn) {
