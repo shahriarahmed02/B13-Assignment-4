@@ -37,6 +37,6 @@ appendChild(): I use this to add the element as the last child of the parent.
 = Event Bubbling is a process where an event starts at the most specific element (the target) and then "bubbles up" to its parent elements in the DOM tree.
 
 ### 4. What is Event Delegation?
-
+= Event Delegation is a technique that uses Event Bubbling to handle events more efficiently.
 
 ### 5. preventDefault() vs stopPropagation()?
