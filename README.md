@@ -34,7 +34,7 @@ Finally, I select a parent element and use a method to "attach" my new element t
 appendChild(): I use this to add the element as the last child of the parent.
 
 ### 3. What is Event Bubbling?
-
+= Event Bubbling is a process where an event starts at the most specific element (the target) and then "bubbles up" to its parent elements in the DOM tree.
 
 ### 4. What is Event Delegation?
 
