@@ -47,10 +47,11 @@ function render() {
 
         if (job.status === 'interview') {
             statusText = "Interview";
-            statusColor = "text-success";
+            statusColor = "opacity-100 bg-success/70 px-2  py-1 w-20 rounded hover:bg-success/90 transition-colors cursor-pointer"; 
+           
         } else if (job.status === 'rejected') {
             statusText = "Rejected";
-            statusColor = "text-error";
+            statusColor = "opacity-100 bg-error/70 px-2.5  py-1 w-20 rounded hover:bg-error/90 transition-colors cursor-pointer";
         }
 
         return `
@@ -60,7 +61,7 @@ function render() {
             </button>
 
             <h3 class="text-lg font-bold text-base-content">${job.company}</h3>
-            <p class="text-blue-500 font-semibold mb-2">${job.position}</p>
+            <p class="opacity-70 font-semibold mb-2">${job.position}</p>
             
             <div class="flex flex-wrap gap-2 text-sm opacity-60 mb-3">
                 <span>${job.location}</span> • <span>${job.type}</span> • <span>${job.salary}</span>
